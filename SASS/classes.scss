@@ -1,0 +1,493 @@
+$black-color: #000;
+$silver-color: #c0c0c0;
+$red-color: #dc143c;
+$selectedRed: #9c143c;
+$borderColor: #ccc;
+
+.container {
+  margin-top: 5px;
+  margin-left: auto;
+  margin-right: auto;
+  background: #fff;
+  padding: 5px;
+  color: black;
+  width: 100%;
+  display: inline-block;
+}
+
+.text_centered {
+  text-align: center;
+  justify-content: center;
+}
+
+.flex_row {
+  @include flex;
+  flex-direction: row;
+}
+
+.flex_column {
+  @include flex;
+  flex-direction: column;
+}
+
+.message {
+  @extend %message-shared;
+}
+
+.success {
+  @extend %message-shared;
+  border-color: green;
+}
+
+.error {
+  @extend %message-shared;
+  border-color: red;
+}
+
+.warning {
+  @extend %message-shared;
+  border-color: yellow;
+}
+
+.div-form {
+  border-radius: 5px;
+  background: #f2f2f2;
+  padding: 20px;
+}
+
+.fg-black {
+  color: $black-color;
+}
+
+.fg-silver {
+  color: $silver-color;
+}
+
+.fg-red {
+  color: $red-color;
+}
+
+.fg-none {
+  color: transparent;
+}
+
+.bg-none {
+  background: transparent;
+}
+
+.bg-black {
+  background: $black-color;
+}
+
+.bg-silver {
+  background: $silver-color;
+}
+
+.bg-red {
+  background: $red-color;
+}
+
+.border-black {
+  @include bordered($black-color, 1px);
+}
+
+.border-silver {
+  @include bordered($silver-color, 1px);
+}
+
+.border-red {
+  @include bordered($red-color, 1px);
+}
+
+.border-green {
+  @include bordered(#68d683, 1px);
+}
+
+.border-blue {
+  @include bordered(rgb(16, 103, 132), 1px);
+}
+
+.header-black {
+  padding: 60px;
+  text-align: center;
+  background: $black-color;
+  color: $silver-color;
+  font-size: 30px;
+}
+
+.header-silver {
+  padding: 60px;
+  text-align: center;
+  background: $silver-color;
+  color: $silver-color;
+  font-size: 30px;
+}
+
+.header-red {
+  padding: 60px;
+  text-align: center;
+  background: $red-color;
+  color: $silver-color;
+  font-size: 30px;
+}
+
+.navigation {
+  background: $black-color;
+  padding: 20px;
+  ul {
+    list-style: none;
+  }
+  li {
+    text-align: center;
+    margin-top: 20px;
+  }
+}
+
+.sticky-nav {
+  overflow: hidden;
+  background: #333;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  ul {
+    text-align: center;
+    list-style-type: none;
+    list-style-type: none;
+    margin: 0;
+    padding: 15px;
+    li {
+      display: inline;
+      font-family: "Fira Sans", sans-serif;
+      font-size: 17px;
+      a {
+        color: white;
+        text-decoration: none;
+        padding: 14px;
+        &:hover {
+          background-color: #111;
+        }
+      }
+    }
+  }
+}
+
+.content {
+  text-align: center;
+}
+
+.dropbtn {
+  background: $red-color;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+  width: 100px;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  background: $selectedRed;
+}
+
+.well {
+  position: relative;
+  padding: 0.5rem 1rem;
+  margin-bottom: 1rem;
+  border: 1px solid transparent;
+  border-radius: 0.5rem;
+  color: $black-color;
+  background: $silver-color;
+}
+
+.well-sm {
+  padding: 0.25rem 0.5rem;
+  margin-bottom: 0.25rem;
+}
+
+.well-lg {
+  padding: 1rem 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.alert {
+  position: relative;
+  padding: 0.75rem 1.25rem;
+  margin-bottom: 1rem;
+  border: 1px solid transparent;
+  border-radius: 0.25rem;
+}
+
+.alert-green {
+  @include important-text(#184f24, #68d683);
+}
+
+.alert-red {
+  @include important-text(rgb(137, 25, 25), rgb(239, 90, 90));
+}
+
+.alert-silver {
+  @include important-text($black-color, $silver-color);
+}
+
+.alert-yellow {
+  @include important-text(rgb(130, 130, 28), rgb(236, 236, 90));
+}
+
+.alert-blue {
+  @include important-text(rgb(16, 103, 132), rgb(111, 203, 234));
+}
+
+.box-green {
+  @include box(50px, 50px, #68d683);
+}
+
+.box-red {
+  @include box(50px, 50px, $red-color);
+}
+
+.box-silver {
+  @include box(50px, 50px, $silver-color);
+}
+
+.box-black {
+  @include box(50px, 50px, $black-color);
+}
+
+.column-left {
+  width: 10%;
+  min-width: 20px;
+  float: left;
+  height: 100%;
+}
+
+.column-right {
+  width: 10%;
+  min-width: 20px;
+  float: right;
+  height: 100%;
+}
+
+.columns-6 {
+  width: 10%;
+}
+
+.middle {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+}
+
+.item1 {
+  grid-area: header;
+  padding: 10px;
+  margin: 10px;
+}
+.item2 {
+  grid-area: menu;
+  padding: 10px;
+  margin: 10px;
+}
+.item3 {
+  grid-area: main;
+  padding: 10px;
+  margin: 10px;
+}
+.item4 {
+  grid-area: right;
+  padding: 10px;
+  margin: 10px;
+}
+.item5 {
+  grid-area: footer;
+  padding: 10px;
+  margin: 10px;
+}
+
+.grid-container-1 {
+  display: grid;
+  grid-template-areas:
+    "header header header header header header"
+    "menu main main main right right"
+    "menu footer footer footer footer footer";
+  grid-gap: 10px;
+  padding: 10px;
+}
+
+.grid-container-1 > div {
+  padding: 20px 0;
+  font-size: 20px;
+}
+
+.grid-container-2 {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  padding: 10px;
+}
+.grid-item-2 {
+  padding: 20px;
+  font-size: 30px;
+  text-align: center;
+}
+
+hr.dashed {
+  border-top: 6px dashed $black-color;
+}
+
+hr.dotted {
+  border-top: 6px dotted $black-color;
+}
+
+hr.solid {
+  border-top: 6px solid $black-color;
+}
+
+hr.rounded {
+  border-top: 8px solid $black-color;
+  border-radius: 5px;
+}
+
+.font-arial {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.font-times {
+  font-family: "Times New Roman", Times, serif;
+}
+
+.font-georgia {
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+.font-gill {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+.font-gothic {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+.font-lucida {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+.pagination {
+  display: inline-block;
+}
+
+.pagination a {
+  color: black;
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+  border: 1px solid #ddd;
+}
+
+.pagination a.active {
+  background-color: #4caf50;
+  color: white;
+  border: 1px solid #4caf50;
+}
+
+.pagination a:hover:not(.active) {
+  background-color: #ddd;
+}
+
+// .column {
+//   float: left;
+//   width: 33.33%;
+//   padding: 15px;
+// }
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+// @media screen and (max-width: 600px) {
+//   .column {
+//     width: 60%;
+//   }
+// }
+
+.img-circle {
+  min-width: 50px;
+  max-width: 30%;
+  height: auto;
+  border-radius: 50%;
+}
+
+.img-rounded-edge {
+  min-width: 50px;
+  max-width: 30%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.img-gray-50 {
+  filter: grayscale(50%);
+}
+
+.img-gray-75 {
+  filter: grayscale(75%);
+}
+
+.img-gray-100 {
+  filter: grayscale(100%);
+}
+
+.img-sepia-50 {
+  filter: sepia(50%);
+}
+
+.img-sepia-75 {
+  filter: sepia(75%);
+}
+
+.img-sepia-100 {
+  filter: sepia(100%);
+}
+
+.img-hover-opacity:hover {
+  opacity: 0.6;
+}
+
+.img-hover-gray:hover {
+  filter: grayscale(100%);
+}
+
+.img-hover-sepia:hover {
+  filter: sepia(100%);
+}

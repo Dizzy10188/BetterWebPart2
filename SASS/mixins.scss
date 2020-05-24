@@ -1,0 +1,73 @@
+@mixin flex {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@mixin box($width, $height, $background) {
+  width: $width;
+  height: $height;
+  background-color: $background;
+  margin: 10px;
+  padding: 10px;
+}
+
+@mixin bordered($color, $width) {
+  border: $width solid $color;
+}
+
+@mixin important-text($color, $background-color) {
+  color: $color;
+  font-weight: bold;
+  background-color: $background-color;
+}
+
+%message-shared {
+  @include bordered(#000, 1px);
+  padding: 10px;
+  color: #333;
+}
+
+@for $i from 1 through 20 {
+  .width-#{$i}0 {
+    width: ($i * 10)+px;
+  }
+}
+
+@for $i from 1 through 20 {
+  .min-width-#{$i}0 {
+    min-width: ($i * 10)+px;
+  }
+}
+
+@for $i from 1 through 20 {
+  .max-width-#{$i}0 {
+    max-width: ($i * 10)+px;
+  }
+}
+
+@for $i from 1 through 20 {
+  .height-#{$i}0 {
+    height: ($i * 10)+px;
+  }
+}
+
+@for $i from 1 through 20 {
+  .min-height-#{$i}0 {
+    min-height: ($i * 10)+px;
+  }
+}
+
+@for $i from 1 through 20 {
+  .max-height-#{$i}0 {
+    max-height: ($i * 10)+px;
+  }
+}
+
+@for $i from 1 through 5 {
+  .columns-#{$i} {
+    width: (100% / $i);
+  }
+}
