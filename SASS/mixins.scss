@@ -1,3 +1,7 @@
+$black-color: #000;
+$silver-color: #c0c0c0;
+$red-color: #dc143c;
+
 @mixin flex {
   display: -webkit-box;
   display: -moz-box;
@@ -31,38 +35,86 @@
 }
 
 @for $i from 1 through 20 {
+  .box-black-#{($i * 10)} {
+    @include box(($i * 10) + px, ($i * 10) + px, $black-color);
+  }
+}
+
+@for $i from 1 through 20 {
+  .box-silver-#{($i * 10)} {
+    @include box(($i * 10) + px, ($i * 10) + px, $silver-color);
+  }
+}
+
+@for $i from 1 through 20 {
+  .box-red-#{($i * 10)} {
+    @include box(($i * 10) + px, ($i * 10) + px, $red-color);
+  }
+}
+
+@for $i from 1 through 20 {
+  .box-green-#{($i * 10)} {
+    @include box(($i * 10) + px, ($i * 10) + px, #68d683);
+  }
+}
+
+@for $i from 1 through 20 {
+  .box-blue-#{($i * 10)} {
+    @include box(($i * 10) + px, ($i * 10) + px, rgb(16, 103, 132));
+  }
+}
+
+@for $i from 1 through 20 {
+  .box-cyan-#{($i * 10)} {
+    @include box(($i * 10) + px, ($i * 10) + px, rgb(111, 203, 234));
+  }
+}
+
+@for $i from 1 through 10 {
+  .width-#{$i}0x {
+    width: ($i * 10%);
+  }
+}
+
+@for $i from 1 through 100 {
   .width-#{$i}0 {
-    width: ($i * 10)+px;
+    width: ($i * 10) + px;
   }
 }
 
-@for $i from 1 through 20 {
+@for $i from 1 through 100 {
   .min-width-#{$i}0 {
-    min-width: ($i * 10)+px;
+    min-width: ($i * 10) + px;
   }
 }
 
-@for $i from 1 through 20 {
+@for $i from 1 through 100 {
   .max-width-#{$i}0 {
-    max-width: ($i * 10)+px;
+    max-width: ($i * 10) + px;
   }
 }
 
-@for $i from 1 through 20 {
+@for $i from 1 through 10 {
+  .height-#{$i}0x {
+    height: ($i * 10%);
+  }
+}
+
+@for $i from 1 through 100 {
   .height-#{$i}0 {
-    height: ($i * 10)+px;
+    height: ($i * 10) + px;
   }
 }
 
-@for $i from 1 through 20 {
+@for $i from 1 through 100 {
   .min-height-#{$i}0 {
-    min-height: ($i * 10)+px;
+    min-height: ($i * 10) + px;
   }
 }
 
-@for $i from 1 through 20 {
+@for $i from 1 through 100 {
   .max-height-#{$i}0 {
-    max-height: ($i * 10)+px;
+    max-height: ($i * 10) + px;
   }
 }
 
