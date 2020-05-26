@@ -1,6 +1,7 @@
 var popup = document.getElementById('mpopupBox');
 var popupLink = document.getElementById("mpopupLink");
 var close = document.getElementsByClassName("close")[0];
+var bar_tabs = document.getElementsByClassName("bar-tabs");
 var side = document.getElementById("side");
 var main = document.getElementById("main");
 var slideIndex = 1;
@@ -70,4 +71,12 @@ function quote() {
     var x = Math.floor((Math.random() * 10));
     // console.log(obj.quotes[x]);   
     return obj.quotes[x];
+}
+
+function openTab(val) {
+    for (i = 0; i < bar_tabs.length; i++) {
+        bar_tabs[i].style.display = "none";
+    }
+    document.getElementById(val).style.display = "block";
+    document.getElementById(val).innerHTML = quote();
 }

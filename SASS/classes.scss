@@ -624,3 +624,27 @@ hr.rounded {
 .img_circle:hover {
   background-color: #666;
 }
+
+.bar-item {
+  padding: 8px 16px;
+  float: left;
+  width: auto;
+  background-color: $black-color;
+  display: block;
+  outline: 0;
+  text-align: left;
+}
+
+.bar-item:hover {
+  background-color: $silver-color;
+  color: $black-color;
+}
+
+.tab-container {
+  content: "";
+  display: table;
+  clear: both;
+  color: $black-color;
+  background-color: $silver-color;
+  @include bordered(1px, $black-color)
+}

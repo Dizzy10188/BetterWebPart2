@@ -118,44 +118,37 @@
     <hr class="rounded">
     <div class="grid-container-1">
         <div class="item1 fg-black">
-            <h3>Toast</h3>
+            <h3>Tabs</h3>
         </div>
-        <div class="item2 bg-red">
-
-            <div class="w3-bar w3-black">
-                <button class="w3-bar-item w3-button" onclick="openCity('London')">London</button>
-                <button class="w3-bar-item w3-button" onclick="openCity('Paris')">Paris</button>
-                <button class="w3-bar-item w3-button" onclick="openCity('Tokyo')">Tokyo</button>
+        <div class="item2 bg-red max-width-300">
+            <div class="bg-black">
+                <div class="bar-item noselect" onclick="openTab('Link 1')">Link 1</div>
+                <div class="bar-item noselect" onclick="openTab('Link 2')">Link 2</div>
+                <div class="bar-item noselect" onclick="openTab('Link 3')">Link 3</div>
             </div>
-            <div id="London" class="w3-container city">
-                <h2>London</h2>
-                <p>London is the capital city of England.</p>
-            </div>
-
-            <div id="Paris" class="w3-container city" style="display:none">
-                <h2>Paris</h2>
-                <p>Paris is the capital of France.</p>
-            </div>
-
-            <div id="Tokyo" class="w3-container city" style="display:none">
-                <h2>Tokyo</h2>
-                <p>Tokyo is the capital of Japan.</p>
-            </div>
-
+            <div id="Link 1" class="bar-tabs tab-container"></div>
+            <div id="Link 2" class="bar-tabs tab-container"></div>
+            <div id="Link 3" class="bar-tabs tab-container"></div>
         </div>
-        <div class="item3 fg-black"></div>
+        <div class="item3 fg-black">
+            To the left is a Tab bar. You can have as many tabs as you want, 
+            but width will be a factor in it. To make this Tab bar, use the 
+            code shown below.
+        </div>
         <div class="item4"></div>
         <div class="item5 bg-black">
             <xmp>
+                <div class="bg-black">
+                    <div class="bar-item" onclick="openTab('Link 1')">Link 1</div>
+                    <div class="bar-item" onclick="openTab('Link 2')">Link 2</div>
+                    <div class="bar-item" onclick="openTab('Link 3')">Link 3</div>
+                </div>
+                <div id="Link 1" class="bar-tabs tab-container"></div>
+                <div id="Link 2" class="bar-tabs tab-container"></div>
+                <div id="Link 3" class="bar-tabs tab-container"></div>
             </xmp>
         </div>
     </div>
-
-
-
-
-
-
 
 
 

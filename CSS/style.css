@@ -4148,6 +4148,30 @@ hr.rounded {
   background-color: #666;
 }
 
+.bar-item {
+  padding: 8px 16px;
+  float: left;
+  width: auto;
+  background-color: #000;
+  display: block;
+  outline: 0;
+  text-align: left;
+}
+
+.bar-item:hover {
+  background-color: #c0c0c0;
+  color: #000;
+}
+
+.tab-container {
+  content: "";
+  display: table;
+  clear: both;
+  color: #000;
+  background-color: #c0c0c0;
+  border: #000 solid 1px;
+}
+
 html {
   font: 100% Helvetica, sans-serif;
   height: 100%;
