@@ -576,7 +576,7 @@ hr.rounded {
   padding: 16px;
 }
 
-.mySlides {
+.slides {
   display: none;
 }
 
@@ -584,7 +584,7 @@ hr.rounded {
   vertical-align: middle;
 }
 
-.slideshow-container {
+.slide-container {
   max-width: 1000px;
   position: relative;
   margin: auto;
@@ -599,12 +599,10 @@ hr.rounded {
   padding: 16px;
   color: #fff;
   background-color: $black-color;
-  border-radius: 0 3px 3px 0;
 }
 
 .next {
   right: 0;
-  border-radius: 50%;
 }
 
 .prev:hover,
