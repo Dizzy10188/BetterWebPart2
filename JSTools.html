@@ -14,12 +14,12 @@
             <li><a href="index.html">Home</a></li>
             <li><a href="Tags.html">Text Tags</a></li>
             <li><a href="Layouts.html">Layouts</a></li>
-            <li><a href="TestCode.html">TestCode</a></li>
+            <li><a href="JSTools.html">JS Tools</a></li>
         </ul>
     </nav>
     <div class="header-black">
-        <h6>Test Code</h6>
-        <p class="fg-silver">JavaScript Test Page</p>
+        <h6>JS Tools</h6>
+        <p class="fg-silver">JavaScript Tools, with a quote read from JSON</p>
     </div>
 
     <div class="grid-container-1">
@@ -35,7 +35,7 @@
                         <h2>This is a modal</h2>
                     </div>
                     <div class="popup-main">
-                        <p>This modal is created by using CSS and JavaScript</p>
+                        <p id="modal-text"></p>
                     </div>
                 </div>
             </div>
@@ -118,6 +118,53 @@
     <hr class="rounded">
     <div class="grid-container-1">
         <div class="item1 fg-black">
+            <h3>Toast</h3>
+        </div>
+        <div class="item2 bg-red">
+
+            <div class="w3-bar w3-black">
+                <button class="w3-bar-item w3-button" onclick="openCity('London')">London</button>
+                <button class="w3-bar-item w3-button" onclick="openCity('Paris')">Paris</button>
+                <button class="w3-bar-item w3-button" onclick="openCity('Tokyo')">Tokyo</button>
+            </div>
+            <div id="London" class="w3-container city">
+                <h2>London</h2>
+                <p>London is the capital city of England.</p>
+            </div>
+
+            <div id="Paris" class="w3-container city" style="display:none">
+                <h2>Paris</h2>
+                <p>Paris is the capital of France.</p>
+            </div>
+
+            <div id="Tokyo" class="w3-container city" style="display:none">
+                <h2>Tokyo</h2>
+                <p>Tokyo is the capital of Japan.</p>
+            </div>
+
+        </div>
+        <div class="item3 fg-black"></div>
+        <div class="item4"></div>
+        <div class="item5 bg-black">
+            <xmp>
+            </xmp>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+    <hr class="rounded">
+    <div class="grid-container-1">
+        <div class="item1 fg-black">
             <h3>Slideshow</h3>
         </div>
         <div class="item2 bg-red min-width-200">
@@ -165,28 +212,6 @@
                     <span class="img_circle" onclick="currentSlide(2)"></span>
                     <span class="img_circle" onclick="currentSlide(3)"></span>
                 </div>
-            </xmp>
-        </div>
-    </div>
-
-    <hr class="rounded">
-    <div class="grid-container-1">
-        <div class="item1 fg-black">
-            <h3>Toast</h3>
-        </div>
-        <div class="item2 bg-red">
-            <div class="box-silver-50 fg-black noselect" onclick="toast()">Toast</div>
-            <div id="toast-message">Toast</div>
-        </div>
-        <div class="item3 fg-black">To the left is a Toast/Snackbar.
-            Inside of it holds a quote of the day. To make a toast,
-            use the code shown below.
-        </div>
-        <div class="item4"></div>
-        <div class="item5 bg-black">
-            <xmp>
-                <div onclick="toast()">Toast</div>
-                <div id="toast-message">Toast</div>
             </xmp>
         </div>
     </div>

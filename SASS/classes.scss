@@ -17,7 +17,7 @@ $borderColor: #ccc;
 
 .text_centered {
   text-align: center;
-  justify-content: center;
+  // justify-content: center;
 }
 
 .flex_row {
@@ -519,7 +519,7 @@ hr.rounded {
 #toast-message {
   visibility: hidden;
   min-width: 250px;
-  margin-left: -125px;
+  margin: 0 auto;
   background-color: $silver-color;
   color: $black-color;
   text-align: center;
@@ -527,10 +527,9 @@ hr.rounded {
   padding: 20px;
   position: fixed;
   z-index: 1;
-  left: 50%;
   bottom: 30px;
   font-size: 20px;
-  @include bordered($black-color, 3px);
+  @include bordered(green, 3px);
 }
 
 #toast-message.show {
